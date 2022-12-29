@@ -213,7 +213,7 @@ int main()
     //6)
     auto myArea = getArea(5, 7, 9);
     //7)
-    auto cooked =isCooked(50, 425);
+    auto cooked = isCooked(50, 425);
     //8)
     auto mySpeed = getSpeed(40,40);
     //9)
