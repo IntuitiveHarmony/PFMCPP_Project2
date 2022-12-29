@@ -77,7 +77,7 @@ void variableDeclarations()
     float f3 = 0.24f;
     bool b1 = true;
     bool b2 = false;
-    bool b3 = 1;
+    bool b3 = true;
     double d1 = 200.34589;
     double d2 = 10045.686894;
     double d3 = 23E45;
@@ -120,7 +120,7 @@ bool openDoor(bool needToOpen, bool isLocked = true)
 /*
  3)
  */
-int remainingDistance(int MPG, int fuel = 12)
+int findRemainingDistance(int MPG, int fuel = 12)
 {
     ignoreUnused(fuel, MPG);
     return{};
@@ -128,7 +128,7 @@ int remainingDistance(int MPG, int fuel = 12)
 /*
  4)
  */
-bool greeting(bool firstName, bool lastName)
+bool sendGreeting(bool firstName, bool lastName)
 {
     ignoreUnused(firstName, lastName);
     return{};
@@ -136,7 +136,7 @@ bool greeting(bool firstName, bool lastName)
 /*
  5)
  */
-double circumference(float radius, double pi = 3.1415926)
+double findCircumference(float radius, double pi = 3.1415926)
 {
     ignoreUnused(pi, radius);
     return{};
@@ -144,7 +144,7 @@ double circumference(float radius, double pi = 3.1415926)
 /*
  6)
  */
-int area(int width, int height, int length = 5)
+int getArea(int width, int height, int length = 5)
 {
     ignoreUnused(length, width, height);
     return{};
@@ -152,7 +152,7 @@ int area(int width, int height, int length = 5)
 /*
  7)
  */
-bool cooked(int time, int temp = 350)
+bool isCooked(int time, int temp = 350)
 {
     ignoreUnused(temp, time);
     return{};
@@ -160,7 +160,7 @@ bool cooked(int time, int temp = 350)
 /*
  8)
  */
-int speed(int time, int distance = 60) 
+int getSpeed(int time, int distance = 60) 
 {
     ignoreUnused(distance, time);
     return{};
@@ -168,7 +168,7 @@ int speed(int time, int distance = 60)
 /*
  9)
  */
-char alert(bool condition1, bool condition2, bool condition3 = false)
+char sendAlert(bool condition1, bool condition2, bool condition3 = false)
 {
     ignoreUnused(condition1, condition2, condition3);
     return{};
@@ -176,7 +176,7 @@ char alert(bool condition1, bool condition2, bool condition3 = false)
 /*
  10)
  */
-int average(int sum, int num = 45)
+int estimateAverage(int sum, int num = 45)
 {
     ignoreUnused(sum, num);
     return{};
