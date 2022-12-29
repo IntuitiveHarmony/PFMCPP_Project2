@@ -205,23 +205,23 @@ int main()
     //2)
     auto openedDoor = openDoor(true, false);
     //3)
-    auto distance = remainingDistance(11, 0);
+    auto distance = findRemainingDistance(11, 0);
     //4)
-    auto greet = greeting(true, false);
+    auto greet = sendGreeting(true, false);
     //5)
-    auto myCir = circumference(2);
+    auto myCir = findCircumference(2);
     //6)
-    auto myArea = area(5, 7, 9);
+    auto myArea = getArea(5, 7, 9);
     //7)
-    auto isCooked = cooked(50, 425);
+    auto cooked =isCooked(50, 425);
     //8)
-    auto mySpeed = speed(40,40);
+    auto mySpeed = getSpeed(40,40);
     //9)
-    auto warning = alert(true, true, true);
+    auto warning = sendAlert(true, true, true);
     //10)
-    auto myAverage = average(30, 30);
+    auto myAverage = estimateAverage(30, 30);
     
-    ignoreUnused(carRented, numbersAdded, openedDoor, distance, greet, myCir, myArea, isCooked, mySpeed, warning, myAverage);
+    ignoreUnused(carRented, numbersAdded, openedDoor, distance, greet, myCir, myArea, cooked, mySpeed, warning, myAverage);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
