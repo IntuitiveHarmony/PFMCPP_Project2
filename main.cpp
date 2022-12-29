@@ -15,7 +15,13 @@ video: Chapter 2 - Part 3
  
  
  1) Write down the names of the 6 major primitive types available in C++  here:
- 
+    int
+    float
+    bool
+    double
+    char
+    void
+    wchar_t    
  
  
  
@@ -64,10 +70,24 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
+    int number2 = 5;
+    int number3 = 8;
+    float f1 = 5.0f;
+    float f2 = 7.89f;
+    float f3 = 0.24f;
+    bool b1 = true;
+    bool b2 = false;
+    bool b3 = true;
+    double d1 = 200.34589;
+    double d2 = 10045.686894;
+    double d3 = 23E45;
+    char c1 = 'H';
+    char c2 = 'W';
+    char c3 = '!';
     
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, number2, number3, f1, f2, f3, b1, b2, b3, d1, d2, d3, c1, c2, c3); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -84,43 +104,83 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+int addTheNumbers(int num1, int num2, int num3 = 2)
+{
+    ignoreUnused(num1, num2, num3);
+    return{};
+}
 /*
  2)
  */
-
+bool openDoor(bool needToOpen, bool isLocked = true)
+{
+    ignoreUnused(isLocked, needToOpen);
+    return{};
+}
 /*
  3)
  */
-
+int findRemainingDistance(int MPG, int fuel = 12)
+{
+    ignoreUnused(fuel, MPG);
+    return{};
+}
 /*
  4)
  */
-
+bool sendGreeting(bool firstName, bool lastName)
+{
+    ignoreUnused(firstName, lastName);
+    return{};
+}
 /*
  5)
  */
-
+double findCircumference(float radius, double pi = 3.1415926)
+{
+    ignoreUnused(pi, radius);
+    return{};
+}
 /*
  6)
  */
-
+int getArea(int width, int height, int length = 5)
+{
+    ignoreUnused(length, width, height);
+    return{};
+}
 /*
  7)
  */
-
+bool isCooked(int time, int temp = 350)
+{
+    ignoreUnused(temp, time);
+    return{};
+}
 /*
  8)
  */
-
+int getSpeed(int time, int distance = 60) 
+{
+    ignoreUnused(distance, time);
+    return{};
+}
 /*
  9)
  */
-
+char sendAlert(bool condition1, bool condition2, bool condition3 = false)
+{
+    ignoreUnused(condition1, condition2, condition3);
+    return{};
+}
 /*
  10)
  */
-
+int estimateAverage(int sum, int num = 45)
+{
+    ignoreUnused(sum, num);
+    return{};
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -141,27 +201,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto numbersAdded = addTheNumbers(5, 8, 1);
     //2)
-    
+    auto openedDoor = openDoor(true, false);
     //3)
-    
+    auto distance = findRemainingDistance(11, 0);
     //4)
-    
+    auto greet = sendGreeting(true, false);
     //5)
-    
+    auto myCir = findCircumference(2);
     //6)
-    
+    auto myArea = getArea(5, 7, 9);
     //7)
-    
+    auto cooked = isCooked(50, 425);
     //8)
-    
+    auto mySpeed = getSpeed(40,40);
     //9)
-    
+    auto warning = sendAlert(true, true, true);
     //10)
+    auto myAverage = estimateAverage(30, 30);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, numbersAdded, openedDoor, distance, greet, myCir, myArea, cooked, mySpeed, warning, myAverage);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
